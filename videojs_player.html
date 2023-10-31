@@ -35,8 +35,19 @@ var options = {
     }
   }
 };
+var options1 = {
+  width: 640,
+  height: 360,
+  plugins: {
+    videoJsResolutionSwitcher: {
+      default: 480,
+      dynamicLabel: true
+    }
+  }
+}
+
+player.videojs(options1)
 
 player.ima(options);
-player.videojs(options)
 </script>
 </html>
