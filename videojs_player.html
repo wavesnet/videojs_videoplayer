@@ -30,7 +30,19 @@
 </body>
   
 <script type="text/javascript">
-var player = videojs('content_video');
+  //var player = videojs('content_video');
+    var options1 = {
+    width: 640,
+    height: 360,
+    plugins: {
+      videoJsResolutionSwitcher: {
+        default: 480,
+        dynamicLabel: true
+      }
+    }
+  }
+  
+  var player = videojs('content_video', options1);
 
 var options = {
   id: 'video_js',
@@ -44,17 +56,6 @@ var options = {
 };
 
 player.ima(options);
-  var options1 = {
-    width: 640,
-    height: 360,
-    plugins: {
-      videoJsResolutionSwitcher: {
-        default: 480,
-        dynamicLabel: true
-      }
-    }
-  }
-  
-  var player = videojs('content_video', options1);
+
 </script>
 </html>
