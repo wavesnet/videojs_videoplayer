@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - video.js: hls + resolution-switcher</title>
+  <link rel='stylesheet' href='https://vjs.zencdn.net/5.11.7/video-js.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<video id="content_video" 
+       class="video-js vjs-fluid vjs-default-skin"
+       controls      
+       autoplay>
+  <source src="https://vz-3c1f28e8-39c.b-cdn.net/181f3e98-1cb3-4721-8143-1a29a802661a/playlist.m3u8" type="application/x-mpegURL">
+</video>
+<!-- partial -->
+<script src='https://vjs.zencdn.net/5.11.7/video.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.6.0/videojs-contrib-hls.js'></script>
+<script src='https://rawgit.com/kmoskwiak/videojs-resolution-switcher/dev/lib/videojs-resolution-switcher.js'></script>
+<script  src="./script.js"></script>
+</body>
+
+<script type="text/javascript"> 
+  videojs('content_video').videoJsResolutionSwitcher({default:'low',dynamicLabel: true})
+  </script>
+</html>
