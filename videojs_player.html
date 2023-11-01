@@ -11,7 +11,7 @@
   </head>
 
 <body style="background-color:black;">    
-      <video id="video_js" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" muted autoplay vjs-16-9 
+      <video id="content_video" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" muted autoplay vjs-16-9 
   data-setup='{}'>
     <source src="https://vz-3c1f28e8-39c.b-cdn.net/181f3e98-1cb3-4721-8143-1a29a802661a/playlist.m3u8?v=1684326679"
       type="application/x-mpegURL">
@@ -22,15 +22,15 @@
     <script src="//googleads.github.io/videojs-ima/dist/videojs.ima.js"></script>
 
     <!--for hls+resolution selection start-->
-  <script src='https://vjs.zencdn.net/5.11.7/video.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.6.0/videojs-contrib-hls.js'></script>
-<script src='https://rawgit.com/kmoskwiak/videojs-resolution-switcher/dev/lib/videojs-resolution-switcher.js'></script>
+    <script src='https://vjs.zencdn.net/5.11.7/video.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.6.0/videojs-contrib-hls.js'></script>
+    <script src='https://rawgit.com/kmoskwiak/videojs-resolution-switcher/dev/lib/videojs-resolution-switcher.js'></script>
 
    <!--for hls+resolution selection end -->
 </body>
   
 <script type="text/javascript">
-var player = videojs('video_js');
+var player = videojs('content_video');
 
 var options = {
   id: 'video_js',
