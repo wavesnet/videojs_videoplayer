@@ -44,18 +44,18 @@
   
   var player = videojs('content_video', options1);
 
-var options = {
-  id: 'video_js',
-  adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpost&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=',
-  plugins: {
-    videoJsResolutionSwitcher: {
-      default: 240,
-      dynamicLabel: true
+  var options = {
+    id: 'content_video',
+    adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpost&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator=',
+    plugins: {
+      videoJsResolutionSwitcher: {
+        default: 240,
+        dynamicLabel: true
+      }
     }
-  }
-};
+  };
 
-player.ima(options);
+  player.ima(options);
 
 </script>
 </html>
