@@ -42,19 +42,19 @@ var options = {
     }
   }
 };
-var options1 = {
-  width: 640,
-  height: 360,
-  plugins: {
-    videoJsResolutionSwitcher: {
-      default: 480,
-      dynamicLabel: true
-    }
-  }
-}
-
-player.videojs(options1)
 
 player.ima(options);
+  var options1 = {
+    width: 640,
+    height: 360,
+    plugins: {
+      videoJsResolutionSwitcher: {
+        default: 480,
+        dynamicLabel: true
+      }
+    }
+  }
+  
+  var player = videojs('content_video', options1);
 </script>
 </html>
