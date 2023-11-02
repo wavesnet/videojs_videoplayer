@@ -5,10 +5,10 @@
 <h2>Text input fields</h2>
 
 <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe">
+  <label for="fname">video_url:</label><br>
+  <input type="text" id="video_url" name="fname" value="John"><br>
+  <label for="lname">ad_url:</label><br>
+  <input type="text" id="ad_url" name="lname" value="Doe">
 </form>
 
 <p>Note that the form itself is not visible.</p>
@@ -16,4 +16,16 @@
 <p>Also note that the default width of text input fields is 20 characters.</p>
 
 </body>
+  <script type="text/javascript"> 
+    // You can get url_string from window.location.href if you want to work with
+    // the URL of the current page
+    var url_string = window.location.href; 
+    var url = new URL(url_string);
+    var video_url = url.searchParams.get("video_url");
+    var ad_url = url.searchParams.get("ad_url");
+    document.getElementById('video_url').value = video_url;
+    document.getElementById('ad_url').value = ad_url;
+    console.log(video_url);
+    console.log(ad_url);
+  </script>
 </html>
