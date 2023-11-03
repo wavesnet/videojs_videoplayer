@@ -31,7 +31,6 @@
   var ad_url = url.searchParams.get('ad_url');
   console.log(ad_url);
   document.getElementById('video_url').value = video_url;
-  //document.getElementById('ad_url').value = ad_url; 
   var video = document.getElementById('content_video');
   video.src = video_url;
  
@@ -41,9 +40,7 @@
   });
 
   video.play();
-//videojs('content_video').videoJsResolutionSwitcher({
-   // default:'low',dynamicLabel: 'true'
- // });
+
 
 </script>
 </html>
