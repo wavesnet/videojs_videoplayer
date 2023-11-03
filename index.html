@@ -28,13 +28,14 @@
     console.log(queryString);
     
     const urlParams = new URLSearchParams(queryString);
-
-    //const product = urlParams.get('video_url')
-   // console.log(product);
-    var video_url = url.searchParams.get('video_url');
+    console.log(urlParams);
+    
+    const video_url = urlParams.get('video_url')
     console.log(video_url);
-    var ad_url = url.searchParams.get('ad_url');
-    console.log(ad_url);
+    //var video_url = url.searchParams.get('video_url');
+   // console.log(video_url);
+    //var ad_url = url.searchParams.get('ad_url');
+    //console.log(ad_url);
     document.getElementById('video_url').value = video_url;
     document.getElementById('ad_url').value = ad_url;
    
