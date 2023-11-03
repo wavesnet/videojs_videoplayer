@@ -40,6 +40,9 @@
       video_tag.setAttribute("id", "content_video");
       video_tag.setAttribute("controls", "true");
       video_tag.setAttribute("autoplay", "true");
+      video_tag.setAttribute("width", "100%");
+      video_tag.setAttribute("height", "100%");
+      video_tag.setAttribute("class", "video-js vjs-fluid vjs-default-skin");
       //creating source tag  
       var source_tag = document.createElement("source"); 
       source_tag.type = "application/x-mpegURL";
