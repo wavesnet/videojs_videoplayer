@@ -1,1 +1,37 @@
 
+<html>
+  <head>
+    <!-- Load dependent stylesheets. -->
+    <link rel="stylesheet" href="//googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.css" />
+    <link rel="stylesheet" href="//googleads.github.io/videojs-ima/dist/videojs.ima.css" />
+    <link rel="stylesheet" type="text/css" href="//aws-cdn.terrafox.com/videojs/video-js.min.css">
+
+    <!-- Load dependent scripts -->
+    <script src="//aws-cdn.terrafox.com/videojs/video.min.js"></script>
+    <script src="//aws-cdn.terrafox.com/videojs-contrib-hls/videojs-contrib-hls.min.js"></script>
+  </head>
+
+<body style="background-color:black;">    
+      <video id="content_video" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" autoplay vjs-16-9 
+  data-setup='{}'>
+    <source src="https://vz-3c1f28e8-39c.b-cdn.net/181f3e98-1cb3-4721-8143-1a29a802661a/playlist.m3u8"
+      type="application/x-mpegURL">
+    </video>
+       <!-- Load dependent scripts -->
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="//googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.min.js"></script>
+    <script src="//googleads.github.io/videojs-ima/dist/videojs.ima.js"></script>  
+</body>
+  
+<script type="text/javascript">
+  
+ videojs('content_video').ima({
+  id: 'content_video',
+  adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator='
+  });
+  //videojs('content_video').videoJsResolutionSwitcher({
+   // default:'low',dynamicLabel: 'true'
+ // });
+
+</script>
+</html>
