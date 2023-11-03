@@ -20,14 +20,26 @@
     // You can get url_string from window.location.href if you want to work with
     // the URL of the current page
     var url_string = window.location.href; 
+     console.log(url_string);
     var url = new URL(url_string);
-    var video_url = url.searchParams.get("video_url");
-    var ad_url = url.searchParams.get("ad_url");
+    console.log(url);
+
+    const queryString = window.location.search;
+    console.log(queryString);
+    
+    const urlParams = new URLSearchParams(queryString);
+
+    //const product = urlParams.get('video_url')
+   // console.log(product);
+    var video_url = url.searchParams.get('video_url');
+    console.log(video_url);
+    var ad_url = url.searchParams.get('ad_url');
+    console.log(ad_url);
     document.getElementById('video_url').value = video_url;
     document.getElementById('ad_url').value = ad_url;
-    console.log(url_string);
-    console.log(video_url);
-    console.log(ad_url);
-    console.log(url);
+   
+    
+    
+    
   </script>
 </html>
