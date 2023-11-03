@@ -1,0 +1,61 @@
+
+<html>
+  <head>
+    <!-- Load dependent stylesheets. -->
+    <link rel="stylesheet" href="//googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.css" />
+    <link rel="stylesheet" href="//googleads.github.io/videojs-ima/dist/videojs.ima.css" />
+    <link rel="stylesheet" type="text/css" href="//aws-cdn.terrafox.com/videojs/video-js.min.css">
+
+    <!-- Load dependent scripts -->
+    <script src="//aws-cdn.terrafox.com/videojs/video.min.js"></script>
+    <script src="//aws-cdn.terrafox.com/videojs-contrib-hls/videojs-contrib-hls.min.js"></script>
+    
+
+  </head>
+
+<body style="background-color:black;">    
+     <div id="div1"></div>
+       <!-- Load dependent scripts -->
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="//googleads.github.io/videojs-ima/node_modules/videojs-contrib-ads/dist/videojs.ads.min.js"></script>
+    <script src="//googleads.github.io/videojs-ima/dist/videojs.ima.js"></script>      
+</body>
+  
+ <script type="text/javascript">
+        
+      var url_string = window.location.href; 
+      console.log(url_string);
+      var url = new URL(url_string);
+      console.log(url);
+      var video_url = url.searchParams.get('video_url');
+      console.log(video_url);
+      var ad_url = url.searchParams.get('ad_url');
+      console.log(ad_url);
+      //document.getElementById('video_url').value = video_url;
+      //var video = document.getElementById('content_video');
+      //video.src = video_url;
+
+      //creating video tag  
+      var video_tag = document.createElement("video");
+      video_tag.setAttribute("id", "content_video");
+      video_tag.setAttribute("controls", "true");
+      video_tag.setAttribute("autoplay", "true");
+      video_tag.setAttribute("width", "100%");
+      video_tag.setAttribute("height", "100%");
+      video_tag.setAttribute("class", "video-js vjs-fluid vjs-default-skin");
+      //creating source tag  
+      var source_tag = document.createElement("source"); 
+      source_tag.type = "application/x-mpegURL";
+      source_tag.src = video_url;
+      video_tag.appendChild(source_tag);
+      const div = document.getElementById("div1");
+      div.appendChild(video_tag);
+     
+     videojs('content_video').ima({
+      id: 'content_video',
+      adTagUrl: ad_url
+      });
+
+    //video.play();
+  </script>
+</html>
