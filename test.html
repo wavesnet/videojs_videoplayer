@@ -38,13 +38,15 @@
       //creating video tag  
       var video_tag = document.createElement("video");
       video_tag.setAttribute("id", "content_video");
+      video_tag.setAttribute("controls", "true");
+      video_tag.setAttribute("autoplay", "true");
       //creating source tag  
       var source_tag = document.createElement("source"); 
       source_tag.type = "application/x-mpegURL";
       source_tag.src = video_url;
       video_tag.appendChild(source_tag);
-      const element = document.getElementById("div1");
-      element.appendChild(video_tag);
+      const div = document.getElementById("div1");
+      div.appendChild(video_tag);
      
      videojs('content_video').ima({
       id: 'content_video',
